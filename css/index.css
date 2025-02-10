@@ -74,10 +74,11 @@
 :root {
     --main-font: Liter; /* FUENTE PRINCIPAL DE LA PAGINA */
     --main-font-weight: 400; /* PESO PRINCIPAL DE CARACTERES */
-    --main-font-size: 1em; /* TAMAÑO PRINCIPAL DE CARACTERES */
-    --main-color: pink; /* COLOR PRINCIPAL DE LA PÁGINA */
+    --main-font-size: 16px; /* TAMAÑO PRINCIPAL DE CARACTERES */
+    --main-color: #FF6CAF; /* COLOR PRINCIPAL DE LA PÁGINA */
+    --main-color-second: #1E1E1E; /* COLOR SECUNDARIO DE LA PÁGINA*/
     --main-max-width: 1200px; /* TAMAÑO MÁXIMO GENERAL DE CONTENIDOS */
-    --main-border: 1px solid black; /* BORDE GENERAL PARA ELEMENTOS */
+    --main-border: 1px solid transparent; /* BORDE GENERAL PARA ELEMENTOS */
 }
 /*END VARIABLES*/
 
@@ -89,13 +90,13 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 2em;
+    padding: .5em 1em;
 
     font-family: var(--main-font);
 }
 
 .logo {
-    width: 50px;
+    width: 15%;
 }
 
 .nav-apartados {
@@ -105,47 +106,102 @@
 
 /*MAIN*/
 main {
-    padding: 1em 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1, h2, h3 {
     font-family: Bebas Neue;
-    font-weight: 400;
+    font-weight: var(--main-font-weight);
 
-    text-align: center;
+    text-align: left;
+
+    margin: 0;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 24px;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 28px;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 24px;
 }
 
-p {
-    font-size: 20px;
+button {
+    background-color: var(--main-color);
+    border: var(--main-border);
+    font-size: 14px;
+    padding: .5em 1em;
 }
 /*INTRODUCCION*/
+#introduccion {
+    background-color: black;
+    color: var(--main-color);
 
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.introduccion-img {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
 /*END INTRODUCCION*/
 /*AMBITOS DE TRABAJO*/
 #ambitos-trabajo {
-    background-color: red;
+    background-color: var(--main-color);
 
+    padding: 1em;
+    gap: 1em;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
 
 .ambitos-trabajo-main {
-    background-color: white;
+    gap: 1em;
     display: flex;
     flex-flow: column;
 }
 /*END AMBITOS DE TRABAJO*/
+/*INTRODUCCION*/
+
+/*END INTRODUCCION*/
 /*END MAIN*/
+
+/*FOOTER*/
+footer {
+    background-color: black;
+    color: var(--main-color);
+}
+#contacto {
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.botones-contacto {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+#redes {
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border-top: 1px solid var(--main-color);
+}
+
+/*END FOOTER*/
