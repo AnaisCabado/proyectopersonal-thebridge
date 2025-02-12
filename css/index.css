@@ -75,8 +75,9 @@
     --main-font: Liter; /* FUENTE PRINCIPAL DE LA PAGINA */
     --main-font-weight: 400; /* PESO PRINCIPAL DE CARACTERES */
     --main-font-size: 16px; /* TAMAÑO PRINCIPAL DE CARACTERES */
-    --main-color: #FF6CAF; /* COLOR PRINCIPAL DE LA PÁGINA */
-    --main-color-second: #1E1E1E; /* COLOR SECUNDARIO DE LA PÁGINA*/
+    --main-color-pink: #FF6CAF; /* ROSA */
+    --main-color-black: #1E1E1E; /* GRIS OSCURO*/
+    --main-color-grey: #B1B1B1; /* GRIS CLARO*/
     --main-max-width: 1200px; /* TAMAÑO MÁXIMO GENERAL DE CONTENIDOS */
     --main-border: 1px solid transparent; /* BORDE GENERAL PARA ELEMENTOS */
 }
@@ -84,7 +85,7 @@
 
 /*HEADER*/
 #menu-header {
-    background-color: var(--main-color);
+    background-color: var(--main-color-pink);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -97,6 +98,15 @@
 
 .logo {
     width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-hamburguesa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-apartados {
@@ -112,7 +122,7 @@ main {
     align-items: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: Bebas Neue;
     font-weight: var(--main-font-weight);
 
@@ -122,43 +132,61 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 26px;
 }
 
 h3 {
     font-size: 24px;
 }
 
+h4 {
+    font-size: 20px;
+}
+
 button {
-    background-color: var(--main-color);
+    background-color: var(--main-color-pink);
+    color: var(--main-color-black);
     border: var(--main-border);
     font-size: 14px;
     padding: .5em 1em;
 }
 /*INTRODUCCION*/
-#introduccion {
-    background-color: black;
-    color: var(--main-color);
+#introduccion .introduccion-pink {
+    background-color: var(--main-color-pink);
+    color: var(--main-color-black);
 
-    padding: 1em;
+    padding: 1em 2em 0em;
     display: flex;
     flex-flow: column;
     gap: 1em;
 }
 
-.introduccion-img {
-    width: 100%;
-    height: 100px;
-    background-color: white;
+#introduccion .introduccion-pink .introduccion-img {
+    position: relative;
+    margin: 0 -2em;
+    width: 100vw;
+}
+
+#introduccion .introduccion-black {
+    background-color: var(--main-color-black);
+    color: var(--main-color-pink);
+
+    padding: 1em 2em 2em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+
+    text-align: center;
 }
 /*END INTRODUCCION*/
 /*AMBITOS DE TRABAJO*/
 #ambitos-trabajo {
-    background-color: var(--main-color);
+    background-color: var(--main-color-black);
+    color: white;
 
     padding: 1em;
     gap: 1em;
@@ -167,21 +195,96 @@ button {
     align-items: center;
 }
 
-.ambitos-trabajo-main {
-    gap: 1em;
+#ambitos-trabajo h2 {
+    color: var(--main-color-pink);
+}
+
+#ambitos-trabajo .ambitos-trabajo-main {
     display: flex;
     flex-flow: column;
+    width: 100%;
 }
-/*END AMBITOS DE TRABAJO*/
-/*INTRODUCCION*/
+/*DISEÑO GRAFICO*/
+#ambitos-trabajo .diseno-grafico {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
 
-/*END INTRODUCCION*/
+#ambitos-trabajo .diseno-grafico .diseno-grafico-texto {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+#ambitos-trabajo .diseno-grafico .diseno-grafico-galeria {
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+}
+
+#ambitos-trabajo .diseno-grafico .diseno-grafico-galeria .diseno-grafico-card {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    position: sticky;
+    top: 1em;
+}
+
+#ambitos-trabajo .diseno-grafico .diseno-grafico-galeria .diseno-grafico-card .card-text {
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    gap: .2em;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    color: white;
+    background-color: color-mix(in srgb, var(--main-color-black) 50%, transparent);
+    font-size: 14px;
+}
+/*END DISEÑO GRAFICO*/
+/*ILUSTRACION*/
+#ambitos-trabajo .ilustracion {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+/*END ILUSTRACION*/
+/*UX/UI*/
+#ambitos-trabajo .ux-ui {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+/*END UX/UI*/
+/*END AMBITOS DE TRABAJO*/
+/*ULTIMOS TRABAJOS*/
+#ultimos-trabajos {
+    background-color: var(--main-color-black);
+    color: var(--main-color-pink);
+    padding: 1em;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+
+    width: 100%;
+}
+/*END ULTIMOS TRABAJOS*/
 /*END MAIN*/
 
 /*FOOTER*/
 footer {
-    background-color: black;
-    color: var(--main-color);
+    background-color: var(--main-color-black);
+    color: var(--main-color-pink);
 }
 #contacto {
     padding: 1em;
@@ -201,7 +304,7 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    border-top: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color-pink);
 }
 
 /*END FOOTER*/
