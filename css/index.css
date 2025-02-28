@@ -268,8 +268,8 @@ button {
 /*END AMBITOS DE TRABAJO*/
 /*ULTIMOS TRABAJOS*/
 #ultimos-trabajos {
-    background-color: var(--main-color-black);
-    color: var(--main-color-pink);
+    background-color: var(--main-color-pink);
+    color: var(--main-color-black);
     padding: 1em;
 
     display: flex;
@@ -279,6 +279,18 @@ button {
     width: 100%;
 }
 /*END ULTIMOS TRABAJOS*/
+/*PRODUCTOS*/
+#productos {
+    background-color: var(--main-color-pink);
+    color: var(--main-color-black);
+
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 1em;
+    gap: 1em;
+}
+/*END PRODUCTOS*/
 /*END MAIN*/
 
 /*FOOTER*/
@@ -308,3 +320,20 @@ footer {
 }
 
 /*END FOOTER*/
+
+
+/*MEDIA*/ 
+@media (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+
+    .nav-apartados {
+        display: none;
+    }
+
+    nav.visible {
+        display: flex;
+    }
+}
+/*END MEDIA*/
