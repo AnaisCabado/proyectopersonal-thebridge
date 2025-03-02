@@ -8,6 +8,12 @@ fetch("../header.html")
         console.error("Error al cargar el header:", error);
     });
 
+// DISPLAY NAV
+function toggleNav() {
+    let nav = document.querySelector(".nav-apartados");
+    nav.classList.toggle("active");
+}
+
 // FETCH FOOTER
 fetch("../footer.html")
     .then(response => response.text())
